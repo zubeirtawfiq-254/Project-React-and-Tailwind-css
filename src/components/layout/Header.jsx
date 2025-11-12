@@ -12,10 +12,11 @@ export default function Header() {
         </div>
 
         {/* Navigation skeleton */}
-        <nav className="hidden lg:flex gap-8 text-sm" aria-label="primary">
-          <a href="#services" style={{ color: '#404040' }} className="hover:text-primary-500 transition font-medium">Services</a>
+        <nav className="hidden lg:flex gap-8 text-sm items-center" aria-label="primary">
+          <a href="#hero" style={{ color: '#404040' }} className="hover:text-primary-500 transition font-medium">Home</a>
+          <a href="#products" style={{ color: '#404040' }} className="hover:text-primary-500 transition font-medium">Services</a>
           <a href="#about" style={{ color: '#404040' }} className="hover:text-primary-500 transition font-medium">About</a>
-          <a href="#contact" style={{ color: '#404040' }} className="hover:text-primary-500 transition font-medium">Contact</a>
+          <a href="#cta" style={{ color: '#404040' }} className="hover:text-primary-500 transition font-medium">Contact</a>
         </nav>
       </div>
     </header>

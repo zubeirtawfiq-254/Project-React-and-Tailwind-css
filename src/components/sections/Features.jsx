@@ -1,6 +1,16 @@
 import React from "react";
 import { FaLaptopCode, FaUsers, FaGlobeAfrica, FaShieldAlt } from "react-icons/fa";
 
+const FeatureCard = ({ icon: Icon, title, desc }) => (
+  <div className="flex items-start gap-4">
+    <div style={{ color: '#a855f7' }} className="text-3xl shrink-0 mt-1"><Icon /></div>
+    <div>
+      <h3 style={{ color: '#171717' }} className="font-semibold mb-2">{title}</h3>
+      <p style={{ color: '#525252' }} className="text-sm">{desc}</p>
+    </div>
+  </div>
+);
+
 const Features = () => {
   const features = [
     {
@@ -26,17 +36,24 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-16" style={{ backgroundColor: '#f5f5f5' }}>
+    <section id="features" className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-6 lg:px-24">
-        <h2 style={{ color: '#064e3b' }} className="text-3xl font-bold font-heading mb-12">Our Core Features</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((f, i) => (
-            <div key={i} className="p-6 bg-white rounded-lg hover:shadow-lg transition" style={{ borderLeftColor: '#0d9488', borderLeftWidth: '4px' }}>
-              <div style={{ color: '#a855f7' }} className="text-3xl mb-4"><f.icon /></div>
-              <h3 style={{ color: '#171717' }} className="font-semibold mb-2">{f.title}</h3>
-              <p style={{ color: '#525252' }} className="text-sm">{f.desc}</p>
-            </div>
-          ))}
+        {/* Section Title */}
+        <h2 style={{ color: '#064e3b' }} className="text-3xl font-bold font-heading mb-12 text-center">Our Core Features</h2>
+
+        {/* Features with Image on Left, Text on Right */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+          {/* Left: Image */}
+          <div className="rounded-lg overflow-hidden shadow-lg">
+            <img src="/src/assets/Images/about.svg" alt="Features showcase" style={{ width: '100%', height: 'auto', objectFit: 'cover' }} />
+          </div>
+
+          {/* Right: Features List */}
+          <div className="space-y-8">
+            {features.map((f, i) => (
+              <FeatureCard key={i} icon={f.icon} title={f.title} desc={f.desc} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

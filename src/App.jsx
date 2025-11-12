@@ -2,7 +2,8 @@ import Header from './components/layout/Header';
 import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Features from './components/sections/Features';
-import Stats from './components/stats';
+import Products from './components/sections/Products';
+import CTA from './components/sections/CTA';
 import Testimonials from './components/Testimonials';
 import Footer from './components/layout/Footer';
 
@@ -14,8 +15,9 @@ export default function App() {
         <Hero />
         <Features />
         <About />
-        <Stats />
+        <Products />
         <Testimonials />
+        <CTA />
       </main>
       <Footer />
     </div>
