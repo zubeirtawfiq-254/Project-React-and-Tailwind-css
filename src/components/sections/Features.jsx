@@ -1,4 +1,5 @@
 import React from "react";
+import Section from "../common/Section";
 import { FaLaptopCode, FaUsers, FaGlobeAfrica, FaShieldAlt } from "react-icons/fa";
 
 const FeatureCard = ({ icon: Icon, title, desc }) => (
@@ -36,16 +37,17 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-16 bg-white">
-      <div className="max-w-6xl mx-auto px-6 lg:px-24">
-        {/* Section Title */}
+    <Section id="features" className="bg-white" style={{
+      width: '1440px',
+      opacity: 1,
+      transform: 'rotate(0deg)',
+    }}>
+      <div>
         <h2 style={{ color: '#064e3b' }} className="text-3xl font-bold font-heading mb-12 text-center">Our Core Features</h2>
-
-        {/* Features with Image on Left, Text on Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left: Image */}
           <div className="rounded-lg overflow-hidden shadow-lg">
-            <img src="/src/assets/Images/about.svg" alt="Features showcase" style={{ width: '100%', height: 'auto', objectFit: 'cover' }} />
+            <img src="/src/assets/Images/features.jpg" alt="Features showcase" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
 
           {/* Right: Features List */}
@@ -56,7 +58,7 @@ const Features = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

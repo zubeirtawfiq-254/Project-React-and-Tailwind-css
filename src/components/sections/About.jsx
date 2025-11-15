@@ -1,15 +1,21 @@
 import React from "react";
+import Section from "../common/Section";
+import Button from "../common/Button";
 
 export default function About() {
   return (
-    <section id="about" className="py-16 bg-white">
-      <div className="max-w-6xl mx-auto px-6 lg:px-24 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        {/* Image placeholder */}
-        <div className="w-full h-56 rounded-lg overflow-hidden" aria-hidden>
-          <img src="/src/assets/Images/about.svg" alt="About placeholder" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+    <Section id="about" style={{
+      width: '1440px',
+      opacity: 1,
+      transform: 'rotate(0deg)',
+    }}>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        {/* Image */}
+        <div className="rounded-lg overflow-hidden shadow-lg">
+          <img src="/src/assets/Images/about.jpg" alt="About IbraTech Hub" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         </div>
 
-        {/* Copy skeleton */}
+        {/* Content */}
         <div>
           <h2 style={{ color: '#064e3b' }} className="text-3xl font-bold font-heading mb-4">About IbraTech Hub</h2>
           <p style={{ color: '#525252' }} className="mb-4">
@@ -20,9 +26,9 @@ export default function About() {
             We integrate coding, data, and media to amplify voices, strengthen governance,
             and create innovative tech solutions for social impact.
           </p>
-          <button style={{ backgroundColor: '#a855f7' }} className="px-6 py-3 rounded-lg font-medium text-white hover:opacity-90 transition">Learn More</button>
+          <Button variant="primary">Learn More</Button>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

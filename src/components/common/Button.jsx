@@ -1,16 +1,31 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Button({ children, variant='primary', ...props }) {
-  const base = 'px-4 py-2 rounded-lg font-medium focus:outline-none focus:ring-2';
+/**
+ * Button component with variants: primary, secondary, outline
+ */
+export default function Button({ variant = 'primary', children, className = '', ...rest }) {
+  const base = 'inline-flex items-center justify-center rounded-lg font-semibold transition focus:outline-none focus:ring-2 focus:ring-offset-2';
+
   const variants = {
-    primary: 'bg-brand text-white hover:bg-brand-600',
-    secondary: 'bg-white text-brand border border-brand',
-    outline: 'bg-transparent text-brand border border-gray-300'
+    primary: 'bg-amber-500 text-white px-6 py-3 hover:opacity-95 focus:ring-amber-400',
+    secondary: 'bg-teal-600 text-white px-6 py-3 hover:opacity-95 focus:ring-teal-400',
+    outline: 'bg-transparent border border-gray-300 text-gray-800 px-6 py-3 hover:bg-gray-50 focus:ring-gray-200',
   };
+
+  const classes = `${base} ${variants[variant] || variants.primary} ${className}`;
+
   return (
-    <button className={`${base} ${variants[variant]}`} {...props}>
+    <button className={classes} {...rest}>
       {children}
     </button>
   );
 }
+
+Button.propTypes = {
+  variant: PropTypes.oneOf(['primary', 'secondary', 'outline']),
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+};
+
 
