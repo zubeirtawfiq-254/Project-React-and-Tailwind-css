@@ -6,100 +6,31 @@ This repository contains a small React + Tailwind CSS site for the IbraTech Hub 
 
 The project was recently updated to match Figma-like measurements and to improve layout flow and content. Key changes made:
 
-
 - Layout & spacing
   - Removed manual `top` offsets and inline `height` values from section components so pages flow naturally and each section starts after the previous one.
   - Standardized vertical spacing by using `py-16` on the shared `Section` wrapper and relevant sections.
   - Converted sections to be content-driven (removed hardcoded heights) to avoid large gaps between sections.
-
 
 - Hero
   - Updated heading to: "Space for Every Dream — Work, Study, Eat & Play"
   - Updated tagline to: "Where Work, Study & Play Meet — Right in Your Neighborhood."
   - Kept a visual overlay for readability and preserved `min-h-screen` for large-viewport presentation.
 
-
 - Stats
   - Added a continuous stats frame inside the hero with four stats, orange separators, and a teal background.
 
-
 - Products
   - Simplified product cards to show product name and price, restored images for each product.
-
 
 - Gallery (Section 4)
   - Renamed and copied images into `src/assets/Images` and updated `src/components/sections/section 4.jsx` to reference them.
   - Gallery now uses the images: `tech.jpg`, `latest.jpg`, `new.jpg`, `workspace.jpg` (or the numbered variants previously created).
 
-
 - Testimonials
   - Testimonial content updated and avatar removed; now shows quote and name only.
 
-
 - Footer
   - Added a fifth column **Careers** with: Careers, Internships, Volunteer, Collaborate with Us.
-
-
-- Misc
-  - Header set to overlay the hero for proper visual stacking.
-  - Dev server runs with Vite; hot module reload updates components during edits.
-
-## Files changed (high level)
-
-- `src/components/sections/Hero.jsx` — heading, tagline, hero layout and stats frame
-- `src/components/sections/Features.jsx` — removed hardcoded height
-- `src/components/sections/section 4.jsx` — gallery image list and layout
-- `src/components/sections/About.jsx` — removed hardcoded height
-- `src/components/sections/Products.jsx` — simplified cards (name + price + image)
-- `src/components/sections/CTA.jsx` — removed hardcoded height
-- `src/components/Testimonials.jsx` — updated text, removed avatar
-- `src/components/layout/Footer.jsx` — added Careers column, removed hardcoded height
-- `src/components/layout/Header.jsx` — made header overlay the hero
-- `src/components/common/Section.jsx` — shared section wrapper used for consistent spacing
-
-## How to run
-
-# IbraTech Hub
-
-This repository contains a small React + Tailwind CSS site for the IbraTech Hub project.
-
-## Recent work (summary)
-
-The project was recently updated to match Figma-like measurements and to improve layout flow and content. Key changes made:
-
-
-- Layout & spacing
-  - Removed manual `top` offsets and inline `height` values from section components so pages flow naturally and each section starts after the previous one.
-  - Standardized vertical spacing by using `py-16` on the shared `Section` wrapper and relevant sections.
-  - Converted sections to be content-driven (removed hardcoded heights) to avoid large gaps between sections.
-
-
-- Hero
-  - Updated heading to: "Space for Every Dream — Work, Study, Eat & Play"
-  - Updated tagline to: "Where Work, Study & Play Meet — Right in Your Neighborhood."
-  - Kept a visual overlay for readability and preserved `min-h-screen` for large-viewport presentation.
-
-
-- Stats
-  - Added a continuous stats frame inside the hero with four stats, orange separators, and a teal background.
-
-
-- Products
-  - Simplified product cards to show product name and price, restored images for each product.
-
-
-- Gallery (Section 4)
-  - Renamed and copied images into `src/assets/Images` and updated `src/components/sections/section 4.jsx` to reference them.
-  - Gallery now uses the images: `tech.jpg`, `latest.jpg`, `new.jpg`, `workspace.jpg` (or the numbered variants previously created).
-
-
-- Testimonials
-  - Testimonial content updated and avatar removed; now shows quote and name only.
-
-
-- Footer
-  - Added a fifth column **Careers** with: Careers, Internships, Volunteer, Collaborate with Us.
-
 
 - Misc
   - Header set to overlay the hero for proper visual stacking.
@@ -152,4 +83,3 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-Install dependencies and start the dev server (Windows PowerShell):
