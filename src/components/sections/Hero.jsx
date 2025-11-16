@@ -66,7 +66,7 @@ export default function Hero() {
           position: 'absolute',
           width: '627px',
           height: '60px',
-          top: '409px',
+          top: '450px',
           left: '414px',
           opacity: 1,
           transform: 'rotate(0deg)',
