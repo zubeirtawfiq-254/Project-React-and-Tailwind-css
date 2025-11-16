@@ -1,16 +1,26 @@
 import React from "react";
 import Section from "../common/Section";
 import { FaLaptopCode, FaUsers, FaGlobeAfrica, FaShieldAlt } from "react-icons/fa";
+import useInView from "../../hooks/useInView";
 
-const FeatureCard = ({ icon: Icon, title, desc }) => (
-  <div className="flex items-start gap-4">
-    <div style={{ color: '#a855f7' }} className="text-3xl shrink-0 mt-1"><Icon /></div>
-    <div>
-      <h3 style={{ color: '#171717' }} className="font-semibold mb-2">{title}</h3>
-      <p style={{ color: '#525252' }} className="text-sm">{desc}</p>
+const FeatureCard = ({ icon: Icon, title, desc }) => {
+  const [ref, isInView] = useInView();
+  
+  return (
+    <div 
+      ref={ref}
+      className={`flex items-start gap-4 transition-all duration-700 ${
+        isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+      }`}
+    >
+      <div style={{ color: '#a855f7' }} className="text-3xl shrink-0 mt-1"><Icon /></div>
+      <div>
+        <h3 style={{ color: '#171717' }} className="font-semibold mb-2">{title}</h3>
+        <p style={{ color: '#525252' }} className="text-sm">{desc}</p>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const Features = () => {
   const features = [
@@ -37,11 +47,7 @@ const Features = () => {
   ];
 
   return (
-    <Section id="features" className="bg-white" style={{
-      width: '1440px',
-      opacity: 1,
-      transform: 'rotate(0deg)',
-    }}>
+    <Section id="features" className="bg-white">
       <div>
         <h2 style={{ color: '#064e3b' }} className="text-3xl font-bold font-heading mb-12 text-center">Our Core Features</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
