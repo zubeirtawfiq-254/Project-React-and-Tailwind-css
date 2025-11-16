@@ -47,7 +47,7 @@ const Features = () => {
   ];
 
   return (
-    <Section id="features" className="bg-white">
+    <Section id="features" className="bg-white w-full">
       <div>
         <h2 style={{ color: '#064e3b' }} className="text-3xl font-bold font-heading mb-12 text-center">Our Core Features</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

@@ -9,11 +9,7 @@ export default function Gallery() {
   ];
 
   return (
-    <section id="gallery" className="py-16 bg-white" style={{
-      width: '1440px',
-      opacity: 1,
-      transform: 'rotate(0deg)',
-    }}>
+    <section id="gallery" className="py-16 bg-white w-full">
       <div className="max-w-6xl mx-auto px-6 lg:px-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left: Text */}

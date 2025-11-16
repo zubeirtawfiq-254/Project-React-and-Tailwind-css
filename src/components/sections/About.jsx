@@ -4,11 +4,7 @@ import Button from "../common/Button";
 
 export default function About() {
   return (
-    <Section id="about" style={{
-      width: '1440px',
-      opacity: 1,
-      transform: 'rotate(0deg)',
-    }}>
+    <Section id="about">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Image */}
         <div className="rounded-lg overflow-hidden shadow-lg">

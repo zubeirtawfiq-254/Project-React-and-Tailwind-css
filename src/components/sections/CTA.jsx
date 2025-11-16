@@ -2,11 +2,8 @@ import React from "react";
 
 export default function CTA() {
   return (
-    <section id="cta" className="py-16" style={{
+    <section id="cta" className="py-16 w-full" style={{
       background: 'linear-gradient(135deg, #064e3b 0%, #0d9488 100%)',
-      width: '1440px',
-      opacity: 1,
-      transform: 'rotate(0deg)',
     }}>
       <div className="max-w-6xl mx-auto px-6 lg:px-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">

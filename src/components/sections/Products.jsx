@@ -25,11 +25,7 @@ export default function Products() {
   ];
 
   return (
-    <section id="products" className="py-16 bg-white" style={{
-      width: '1440px',
-      opacity: 1,
-      transform: 'rotate(0deg)',
-    }}>
+    <section id="products" className="py-16 bg-white w-full">
       <div className="max-w-6xl mx-auto px-6 lg:px-24">
         <h2 style={{ color: '#064e3b' }} className="text-3xl font-bold font-heading mb-12 text-center">
           All Products & Services
