@@ -1,3 +1,5 @@
+import Button from '../common/Button.jsx';
+
 const Stat = ({ value, label }) => (
   <div className="text-center">
     <div style={{ color: '#f59e0b' }} className="text-2xl md:text-3xl font-bold">{value}</div>
@@ -49,6 +51,12 @@ export default function Hero() {
           <h1 style={{ color: '#ffffff', textAlign: 'center', lineHeight: '1.05', margin: 0, fontSize: '48px', maxWidth: '100%' }} className="font-bold font-heading leading-tight">
             Space for Every Dream — Work, Study, Eat & Play
           </h1>
+          <div className="lg:hidden flex flex-col items-center gap-4 mt-8">
+            <p className="text-white text-center px-6 text-base">
+              Where Work, Study & Play Meet — Right in Your Neighborhood.
+            </p>
+            <Button variant="primary">Book a Session</Button>
+          </div>
         </div>
       </div>
 
@@ -75,6 +83,7 @@ export default function Hero() {
           zIndex: 31,
           textShadow: '0 4px 12px rgba(0,0,0,0.6)'
         }}
+        className="hidden lg:block"
       >
         Where Work, Study & Play Meet — Right in Your Neighborhood.
       </p>
@@ -98,7 +107,7 @@ export default function Hero() {
           alignItems: 'center',
           justifyContent: 'center',
           gap: '10px',
-          backgroundColor: '#E2E2E266',
+          backgroundColor: '#0d9488',
           color: '#ffffff',
           border: 'none',
           cursor: 'pointer',
@@ -106,7 +115,7 @@ export default function Hero() {
           zIndex: 25,
           backdropFilter: 'blur(30px)',
         }}
-        className="font-medium text-lg"
+        className="font-medium text-lg hidden lg:flex"
       >
         Book a Session
       </button>

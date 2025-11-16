@@ -65,8 +65,9 @@ export default {
     },
     extend: {
       fontFamily: {
+        saira: ['Saira', 'Inter', 'Segoe UI', 'sans-serif'],
         sans: ['Inter', 'Segoe UI', 'sans-serif'],
-        heading: ['Poppins', 'Inter', 'sans-serif'],
+        heading: ['Poppins', 'Saira', 'Inter', 'sans-serif'],
       },
     },
   },
